@@ -20,6 +20,7 @@ import com.alibaba.csp.sentinel.datasource.Converter;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.nacos.api.config.ConfigFactory;
 import com.alibaba.nacos.api.config.ConfigService;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -30,6 +31,10 @@ import java.util.List;
  */
 @Configuration
 public class NacosConfig {
+
+    @Value("${nacos.url}")
+    private String address;
+
     @Bean
     public Converter<List<FlowRuleEntity>, String> flowRuleEntityEncoder() {
         return JSON::toJSONString;
@@ -41,6 +46,6 @@ public class NacosConfig {
     }
     @Bean
     public ConfigService nacosConfigService() throws Exception {
-        return ConfigFactory.createConfigService("localhost");
+        return ConfigFactory.createConfigService(address);
     }
 }
