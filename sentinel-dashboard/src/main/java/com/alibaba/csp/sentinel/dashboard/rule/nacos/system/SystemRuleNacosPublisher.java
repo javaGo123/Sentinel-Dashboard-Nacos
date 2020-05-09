@@ -25,7 +25,7 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 
 /**
- * @author itmuch.com
+ * @author wangxinxin
  */
 @Component("systemRuleNacosPublisher")
 public class SystemRuleNacosPublisher implements DynamicRulePublisher<List<SystemRuleEntity>> {

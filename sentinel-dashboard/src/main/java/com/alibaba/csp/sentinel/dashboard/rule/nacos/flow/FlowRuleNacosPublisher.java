@@ -24,7 +24,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.List;
 /**
- * @author itmuch.com
+ * @author wangxinxin
  */
 @Component("flowRuleNacosPublisher")
 public class FlowRuleNacosPublisher implements DynamicRulePublisher<List<FlowRuleEntity>> {

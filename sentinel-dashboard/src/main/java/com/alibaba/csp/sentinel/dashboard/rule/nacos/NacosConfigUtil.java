@@ -28,8 +28,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 /**
- * @author Eric Zhao
- * @author www.itmuch.com
+ * @author wangxinxin
  * @since 1.4.0
  */
 public final class NacosConfigUtil {
